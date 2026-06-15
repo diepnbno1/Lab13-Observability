@@ -4,10 +4,10 @@ import time
 from dataclasses import dataclass
 
 from . import metrics
-from .mock_llm import FakeLLM
+from .mock_llm import FakeLLM, FakeResponse
 from .mock_rag import retrieve
 from .pii import hash_user_id, summarize_text
-from .tracing import langfuse_context, observe
+from .tracing import get_langfuse_client, observe
 
 
 @dataclass
@@ -25,25 +25,37 @@ class LabAgent:
         self.model = model
         self.llm = FakeLLM(model=model)
 
-    @observe()
+    @observe(name="agent.run", capture_input=False, capture_output=False)
     def run(self, user_id: str, feature: str, session_id: str, message: str) -> AgentResult:
         started = time.perf_counter()
-        docs = retrieve(message)
-        prompt = f"Feature={feature}\nDocs={docs}\nQuestion={message}"
-        response = self.llm.generate(prompt)
+        docs = self._retrieve(message)
+        prompt = self._build_prompt(feature=feature, docs=docs, message=message)
+        response = self._generate(prompt)
         quality_score = self._heuristic_quality(message, response.text, docs)
         latency_ms = int((time.perf_counter() - started) * 1000)
         cost_usd = self._estimate_cost(response.usage.input_tokens, response.usage.output_tokens)
 
-        langfuse_context.update_current_trace(
-            user_id=hash_user_id(user_id),
-            session_id=session_id,
-            tags=["lab", feature, self.model],
-        )
-        langfuse_context.update_current_observation(
-            metadata={"doc_count": len(docs), "query_preview": summarize_text(message)},
-            usage_details={"input": response.usage.input_tokens, "output": response.usage.output_tokens},
-        )
+        client = get_langfuse_client()
+        if client is not None:
+            client.update_current_trace(
+                name="chat_request",
+                user_id=hash_user_id(user_id),
+                session_id=session_id,
+                tags=["lab", feature, self.model],
+                metadata={
+                    "feature": feature,
+                    "model": self.model,
+                    "query_preview": summarize_text(message),
+                },
+            )
+            client.update_current_span(
+                metadata={
+                    "latency_ms": latency_ms,
+                    "quality_score": quality_score,
+                    "cost_usd": cost_usd,
+                    "doc_count": len(docs),
+                }
+            )
 
         metrics.record_request(
             latency_ms=latency_ms,
@@ -61,6 +73,51 @@ class LabAgent:
             cost_usd=cost_usd,
             quality_score=quality_score,
         )
+
+    @observe(name="rag.retrieve", capture_input=False, capture_output=False)
+    def _retrieve(self, message: str) -> list[str]:
+        docs = retrieve(message)
+        client = get_langfuse_client()
+        if client is not None:
+            client.update_current_span(
+                metadata={
+                    "tool_name": "mock_rag",
+                    "doc_count": len(docs),
+                    "query_preview": summarize_text(message),
+                }
+            )
+        return docs
+
+    @observe(name="llm.generate", as_type="generation", capture_input=False, capture_output=False)
+    def _generate(self, prompt: str) -> FakeResponse:
+        response = self.llm.generate(prompt)
+        client = get_langfuse_client()
+        if client is not None:
+            client.update_current_generation(
+                model=response.model,
+                usage_details={
+                    "input": response.usage.input_tokens,
+                    "output": response.usage.output_tokens,
+                },
+                cost_details={
+                    "total": self._estimate_cost(
+                        response.usage.input_tokens,
+                        response.usage.output_tokens,
+                    )
+                },
+                metadata={"prompt_preview": summarize_text(prompt)},
+            )
+        return response
+
+    def _build_prompt(self, feature: str, docs: list[str], message: str) -> str:
+        compact_docs = " ".join(docs[:2])[:600]
+        compact_question = message.strip()[:400]
+        return f"Feature={feature}\nDocs={compact_docs}\nQuestion={compact_question}"
+
+    def legacy_prompt_cost_estimate(self, feature: str, docs: list[str], message: str) -> tuple[int, int]:
+        legacy_prompt = f"Feature={feature}\nDocs={docs}\nQuestion={message}"
+        optimized_prompt = self._build_prompt(feature=feature, docs=docs, message=message)
+        return max(20, len(legacy_prompt) // 4), max(20, len(optimized_prompt) // 4)
 
     def _estimate_cost(self, tokens_in: int, tokens_out: int) -> float:
         input_cost = (tokens_in / 1_000_000) * 3
