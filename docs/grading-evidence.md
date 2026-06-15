@@ -12,4 +12,4 @@
 - Incident before/after fix
 - Cost comparison before/after optimization: `docs/evidence/cost_comparison.json`
 - Auto-instrumentation proof: `docs/evidence/runtime_summary.json`
-- Audit log proof: `data/audit.jsonl`
+- Audit log proof: `docs/evidence/audit-log-sample.jsonl` and runtime output `data/audit.jsonl`

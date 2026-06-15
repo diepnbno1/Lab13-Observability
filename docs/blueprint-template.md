@@ -82,4 +82,4 @@
 - [BONUS_COST_OPTIMIZATION]: Compact prompt construction reduces measured input tokens from 340 to 330 on the sample set, saving 2.94% input-token cost. Evidence: `docs/evidence/cost_comparison.json`.
 - [BONUS_DASHBOARD_QUALITY]: Professional 6-panel local dashboard with clear units, SLO lines, refresh status, and screenshot evidence at `docs/evidence/dashboard-6-panels.png`.
 - [BONUS_AUTOMATION]: Custom script `scripts/run_observability_demo.py` sends sample requests, injects incident, validates logs, checks Langfuse traces, and writes `docs/evidence/runtime_summary.json`.
-- [BONUS_AUDIT_LOGS]: Separate audit events are written to `data/audit.jsonl` for completed chats, failed chats, and incident toggle actions.
+- [BONUS_AUDIT_LOGS]: Separate audit events are written to `data/audit.jsonl` for completed chats, failed chats, and incident toggle actions. Sanitized evidence sample: `docs/evidence/audit-log-sample.jsonl`.

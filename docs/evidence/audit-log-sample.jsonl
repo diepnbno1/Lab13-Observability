@@ -1,0 +1,3 @@
+{"ts": "2026-06-15T07:10:09.678779+00:00", "level": "info", "event": "chat_completed", "service": "audit", "env": "dev", "correlation_id": "req-c2e68040", "user_id_hash": "2055254ee30a", "session_id": "s01", "feature": "qa", "model": "claude-sonnet-4-5", "latency_ms": 152, "cost_usd": 0.002673, "quality_score": 0.9}
+{"ts": "2026-06-15T07:10:20.053367+00:00", "level": "info", "event": "incident_enabled", "service": "audit", "env": "dev", "correlation_id": "req-7563d830", "name": "rag_slow"}
+{"ts": "2026-06-15T07:10:23.002106+00:00", "level": "info", "event": "incident_disabled", "service": "audit", "env": "dev", "correlation_id": "req-1a2773b9", "name": "rag_slow"}
