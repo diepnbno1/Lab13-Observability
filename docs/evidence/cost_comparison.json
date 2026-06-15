@@ -1,0 +1,80 @@
+{
+  "method": "Compare legacy prompt construction with compact prompt construction on sample_queries.jsonl.",
+  "legacy_input_tokens": 340,
+  "optimized_input_tokens": 330,
+  "legacy_input_cost_usd": 0.00102,
+  "optimized_input_cost_usd": 0.00099,
+  "savings_pct": 2.94,
+  "rows": [
+    {
+      "session_id": "s01",
+      "feature": "qa",
+      "legacy_input_tokens": 37,
+      "optimized_input_tokens": 36,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s02",
+      "feature": "qa",
+      "legacy_input_tokens": 33,
+      "optimized_input_tokens": 32,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s03",
+      "feature": "summary",
+      "legacy_input_tokens": 40,
+      "optimized_input_tokens": 39,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s04",
+      "feature": "qa",
+      "legacy_input_tokens": 36,
+      "optimized_input_tokens": 35,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s05",
+      "feature": "qa",
+      "legacy_input_tokens": 34,
+      "optimized_input_tokens": 33,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s06",
+      "feature": "summary",
+      "legacy_input_tokens": 36,
+      "optimized_input_tokens": 35,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s07",
+      "feature": "qa",
+      "legacy_input_tokens": 30,
+      "optimized_input_tokens": 29,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s08",
+      "feature": "qa",
+      "legacy_input_tokens": 28,
+      "optimized_input_tokens": 27,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s09",
+      "feature": "qa",
+      "legacy_input_tokens": 37,
+      "optimized_input_tokens": 36,
+      "input_token_delta": 1
+    },
+    {
+      "session_id": "s10",
+      "feature": "qa",
+      "legacy_input_tokens": 29,
+      "optimized_input_tokens": 28,
+      "input_token_delta": 1
+    }
+  ]
+}

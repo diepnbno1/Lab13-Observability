@@ -1,0 +1,302 @@
+[
+  {
+    "id": "4d43c4393a7c9bd8d1be1bcbdb954794",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:25.843Z",
+    "latency": 2.656,
+    "release": null,
+    "version": null,
+    "userId": "bfddda39934f",
+    "sessionId": "s_incident_rag_slow",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "c692f1c32237876c71b2757b5b90ace4",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:25.333Z",
+    "latency": 0.156,
+    "release": null,
+    "version": null,
+    "userId": "105a9cef3903",
+    "sessionId": "s10",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "811f0e94cdec52714bd82e7693b9ee56",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:24.905Z",
+    "latency": 0.153,
+    "release": null,
+    "version": null,
+    "userId": "4d14d5d4f719",
+    "sessionId": "s09",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "5ae4d0248e77844748fdd3df0f444739",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:24.440Z",
+    "latency": 0.153,
+    "release": null,
+    "version": null,
+    "userId": "2f015d970c0b",
+    "sessionId": "s08",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "4b28bcc3a471e3af16448954400d7009",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:24.013Z",
+    "latency": 0.152,
+    "release": null,
+    "version": null,
+    "userId": "1632c29ecdec",
+    "sessionId": "s07",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "ae3bd74b39b4123c74ba68f0c996c53b",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:23.578Z",
+    "latency": 0.154,
+    "release": null,
+    "version": null,
+    "userId": "4c4f62330d76",
+    "sessionId": "s06",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "summary"
+    ]
+  },
+  {
+    "id": "aeef3184caaf93f4736ab1c9996cec22",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:23.152Z",
+    "latency": 0.155,
+    "release": null,
+    "version": null,
+    "userId": "64f6ec689229",
+    "sessionId": "s05",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "86c30625440426ffaad740fcde456a4a",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:22.698Z",
+    "latency": 0.154,
+    "release": null,
+    "version": null,
+    "userId": "75af07890985",
+    "sessionId": "s04",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "df9655b68377619214e83ca05e5742d4",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:22.268Z",
+    "latency": 0.153,
+    "release": null,
+    "version": null,
+    "userId": "97ce842ec69d",
+    "sessionId": "s03",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "summary"
+    ]
+  },
+  {
+    "id": "6d414f1e2dcccfbedaa8c451469162fa",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:21.841Z",
+    "latency": 0.156,
+    "release": null,
+    "version": null,
+    "userId": "95b6504a8bd6",
+    "sessionId": "s02",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "30e7f844ae41460e3718cc19909b290c",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:11:21.395Z",
+    "latency": 0.152,
+    "release": null,
+    "version": null,
+    "userId": "2055254ee30a",
+    "sessionId": "s01",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "9e8ad9c43da9ac9504c8f2ac6eb6e4ba",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:20.063Z",
+    "latency": 2.656,
+    "release": null,
+    "version": null,
+    "userId": "bfddda39934f",
+    "sessionId": "s_incident_rag_slow",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "6a92735de52bff8fb94a0fcaa5d5e011",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:19.637Z",
+    "latency": 0.152,
+    "release": null,
+    "version": null,
+    "userId": "105a9cef3903",
+    "sessionId": "s10",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "71153ff161249acbd34685b0605fd7b9",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:19.189Z",
+    "latency": 0.154,
+    "release": null,
+    "version": null,
+    "userId": "4d14d5d4f719",
+    "sessionId": "s09",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "2ae814f8856e3b93f17373561eb69f03",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:18.765Z",
+    "latency": 0.152,
+    "release": null,
+    "version": null,
+    "userId": "2f015d970c0b",
+    "sessionId": "s08",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "eea931d1a10350d410758991bdb6016f",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:18.333Z",
+    "latency": 0.156,
+    "release": null,
+    "version": null,
+    "userId": "1632c29ecdec",
+    "sessionId": "s07",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "c19035dddba882c7f98ab1e105dade13",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:17.898Z",
+    "latency": 0.154,
+    "release": null,
+    "version": null,
+    "userId": "4c4f62330d76",
+    "sessionId": "s06",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "summary"
+    ]
+  },
+  {
+    "id": "abf1b78e20cc5d8273011fda15efca2f",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:17.443Z",
+    "latency": 0.156,
+    "release": null,
+    "version": null,
+    "userId": "64f6ec689229",
+    "sessionId": "s05",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "30b5e48076c858bf83ae4fe3fcfa6161",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:17.024Z",
+    "latency": 0.154,
+    "release": null,
+    "version": null,
+    "userId": "75af07890985",
+    "sessionId": "s04",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "qa"
+    ]
+  },
+  {
+    "id": "bddf4c39cb2cb8e6744a144b5b13bb20",
+    "name": "chat_request",
+    "timestamp": "2026-06-15T07:10:16.483Z",
+    "latency": 0.154,
+    "release": null,
+    "version": null,
+    "userId": "97ce842ec69d",
+    "sessionId": "s03",
+    "tags": [
+      "claude-sonnet-4-5",
+      "lab",
+      "summary"
+    ]
+  }
+]

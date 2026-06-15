@@ -1,0 +1,95 @@
+{
+  "health": {
+    "ok": true,
+    "tracing_enabled": true,
+    "incidents": {
+      "rag_slow": false,
+      "tool_fail": false,
+      "cost_spike": false
+    }
+  },
+  "requests_sent": 10,
+  "sample_trace_candidates": [
+    {
+      "round": 1,
+      "session_id": "s01",
+      "feature": "qa",
+      "correlation_id": "req-76ea76ef",
+      "latency_ms": 151,
+      "client_latency_ms": 439
+    },
+    {
+      "round": 1,
+      "session_id": "s02",
+      "feature": "qa",
+      "correlation_id": "req-389daff0",
+      "latency_ms": 154,
+      "client_latency_ms": 433
+    },
+    {
+      "round": 1,
+      "session_id": "s03",
+      "feature": "summary",
+      "correlation_id": "req-074dfb05",
+      "latency_ms": 152,
+      "client_latency_ms": 422
+    },
+    {
+      "round": 1,
+      "session_id": "s04",
+      "feature": "qa",
+      "correlation_id": "req-30622ec4",
+      "latency_ms": 154,
+      "client_latency_ms": 454
+    },
+    {
+      "round": 1,
+      "session_id": "s05",
+      "feature": "qa",
+      "correlation_id": "req-3e7f64d3",
+      "latency_ms": 153,
+      "client_latency_ms": 427
+    }
+  ],
+  "incident": {
+    "scenario": "rag_slow",
+    "correlation_id": "req-5519de54",
+    "latency_ms": 2655,
+    "expected_root_cause": "Retrieval latency spike in rag.retrieve span."
+  },
+  "metrics": {
+    "traffic": 32,
+    "latency_p50": 153.0,
+    "latency_p95": 2653.0,
+    "latency_p99": 2655.0,
+    "error_rate_pct": 0.0,
+    "avg_cost_usd": 0.002036,
+    "total_cost_usd": 0.065139,
+    "tokens_in_total": 1068,
+    "tokens_out_total": 4129,
+    "error_breakdown": {},
+    "quality_avg": 0.875
+  },
+  "dashboard": {
+    "window_minutes": 60,
+    "refresh_seconds": 15,
+    "panel_count": 6,
+    "slo": {
+      "latency_p95_ms": 3000,
+      "error_rate_pct": 2,
+      "daily_cost_usd": 2.5,
+      "quality_score_avg": 0.75
+    }
+  },
+  "validate_logs": {
+    "returncode": 0,
+    "estimated_score": 100,
+    "stdout": "--- Lab Verification Results ---\nTotal log records analyzed: 69\nRecords with missing required fields: 0\nRecords with missing enrichment (context): 0\nUnique correlation IDs found: 36\nPotential PII leaks detected: 0\n\n--- Grading Scorecard (Estimates) ---\n+ [PASSED] Basic JSON schema\n+ [PASSED] Correlation ID propagation\n+ [PASSED] Log enrichment\n+ [PASSED] PII scrubbing\n\nEstimated Score: 100/100\n",
+    "stderr": ""
+  },
+  "langfuse_trace_check": {
+    "ok": true,
+    "records_returned": 20,
+    "limit": 20
+  }
+}

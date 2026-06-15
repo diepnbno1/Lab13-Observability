@@ -1,0 +1,243 @@
+{
+  "id": "4d43c4393a7c9bd8d1be1bcbdb954794",
+  "projectId": "cmqeux7ka026dad0cpie4nbw6",
+  "name": "chat_request",
+  "timestamp": "2026-06-15T07:11:25.843Z",
+  "environment": "default",
+  "tags": [
+    "claude-sonnet-4-5",
+    "lab",
+    "qa"
+  ],
+  "bookmarked": false,
+  "release": null,
+  "version": null,
+  "userId": "bfddda39934f",
+  "sessionId": "s_incident_rag_slow",
+  "public": false,
+  "input": null,
+  "output": null,
+  "metadata": {
+    "feature": "qa",
+    "model": "claude-sonnet-4-5",
+    "query_preview": "Explain why metrics traces and logs work together during a latency incident.",
+    "latency_ms": 2655,
+    "quality_score": 0.8,
+    "cost_usd": 0.002412,
+    "doc_count": 1,
+    "resourceAttributes": {
+      "telemetry.sdk.language": "python",
+      "telemetry.sdk.name": "opentelemetry",
+      "telemetry.sdk.version": "1.42.1",
+      "service.name": "unknown_service"
+    },
+    "scope": {
+      "name": "langfuse-sdk",
+      "version": "3.2.1",
+      "attributes": {}
+    }
+  },
+  "createdAt": "2026-06-15T07:12:11.000Z",
+  "updatedAt": "2026-06-15T07:12:10.152Z",
+  "externalId": null,
+  "scores": [],
+  "latency": 2.656,
+  "observations": [
+    {
+      "id": "8696f1995c422aa3",
+      "traceId": "4d43c4393a7c9bd8d1be1bcbdb954794",
+      "startTime": "2026-06-15T07:11:28.345Z",
+      "endTime": "2026-06-15T07:11:28.497Z",
+      "projectId": "cmqeux7ka026dad0cpie4nbw6",
+      "parentObservationId": "f87517bdac22b7e8",
+      "type": "GENERATION",
+      "environment": "default",
+      "name": "llm.generate",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "version": null,
+      "createdAt": "2026-06-15T07:12:10.009Z",
+      "updatedAt": "2026-06-15T07:12:10.009Z",
+      "input": null,
+      "output": null,
+      "metadata": {
+        "prompt_preview": "Feature=qa Docs=No domain document matched. Use general fallback answer. Questio...",
+        "resourceAttributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.42.1",
+          "service.name": "unknown_service"
+        },
+        "scope": {
+          "name": "langfuse-sdk",
+          "version": "3.2.1",
+          "attributes": {}
+        }
+      },
+      "model": "claude-sonnet-4-5",
+      "modelParameters": {},
+      "completionStartTime": null,
+      "promptId": null,
+      "promptName": null,
+      "promptVersion": null,
+      "latency": 0.152,
+      "timeToFirstToken": null,
+      "usageDetails": {
+        "input": 39,
+        "output": 153,
+        "total": 192
+      },
+      "costDetails": {
+        "total": 0.002412
+      },
+      "usagePricingTierId": "c5qmrqolku82tra3vgdixmys_tier_default",
+      "usagePricingTierName": "Standard",
+      "inputPrice": 6e-06,
+      "outputPrice": 1.5e-05,
+      "totalPrice": 0,
+      "calculatedInputCost": null,
+      "calculatedOutputCost": null,
+      "calculatedTotalCost": 0.002412,
+      "unit": "TOKENS",
+      "promptTokens": 39,
+      "completionTokens": 153,
+      "totalTokens": 192,
+      "modelId": "c5qmrqolku82tra3vgdixmys",
+      "usage": {
+        "unit": "TOKENS",
+        "input": 39,
+        "output": 153,
+        "total": 192
+      }
+    },
+    {
+      "id": "28c5e990ea029ed2",
+      "traceId": "4d43c4393a7c9bd8d1be1bcbdb954794",
+      "startTime": "2026-06-15T07:11:25.843Z",
+      "endTime": "2026-06-15T07:11:28.344Z",
+      "projectId": "cmqeux7ka026dad0cpie4nbw6",
+      "parentObservationId": "f87517bdac22b7e8",
+      "type": "SPAN",
+      "environment": "default",
+      "name": "rag.retrieve",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "version": null,
+      "createdAt": "2026-06-15T07:12:10.009Z",
+      "updatedAt": "2026-06-15T07:12:10.009Z",
+      "input": null,
+      "output": null,
+      "metadata": {
+        "tool_name": "mock_rag",
+        "doc_count": 1,
+        "query_preview": "Explain why metrics traces and logs work together during a latency incident.",
+        "resourceAttributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.42.1",
+          "service.name": "unknown_service"
+        },
+        "scope": {
+          "name": "langfuse-sdk",
+          "version": "3.2.1",
+          "attributes": {}
+        }
+      },
+      "model": null,
+      "modelParameters": null,
+      "completionStartTime": null,
+      "promptId": null,
+      "promptName": null,
+      "promptVersion": null,
+      "latency": 2.501,
+      "timeToFirstToken": null,
+      "usageDetails": {},
+      "costDetails": {},
+      "usagePricingTierId": null,
+      "usagePricingTierName": null,
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "totalPrice": 0,
+      "calculatedInputCost": null,
+      "calculatedOutputCost": null,
+      "calculatedTotalCost": 0,
+      "unit": "TOKENS",
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "totalTokens": 0,
+      "modelId": null,
+      "usage": {
+        "unit": "TOKENS",
+        "input": 0,
+        "output": 0,
+        "total": 0
+      }
+    },
+    {
+      "id": "f87517bdac22b7e8",
+      "traceId": "4d43c4393a7c9bd8d1be1bcbdb954794",
+      "startTime": "2026-06-15T07:11:25.843Z",
+      "endTime": "2026-06-15T07:11:28.499Z",
+      "projectId": "cmqeux7ka026dad0cpie4nbw6",
+      "parentObservationId": null,
+      "type": "SPAN",
+      "environment": "default",
+      "name": "agent.run",
+      "level": "DEFAULT",
+      "statusMessage": null,
+      "version": null,
+      "createdAt": "2026-06-15T07:12:10.009Z",
+      "updatedAt": "2026-06-15T07:12:10.009Z",
+      "input": null,
+      "output": null,
+      "metadata": {
+        "latency_ms": 2655,
+        "quality_score": 0.8,
+        "cost_usd": 0.002412,
+        "doc_count": 1,
+        "resourceAttributes": {
+          "telemetry.sdk.language": "python",
+          "telemetry.sdk.name": "opentelemetry",
+          "telemetry.sdk.version": "1.42.1",
+          "service.name": "unknown_service"
+        },
+        "scope": {
+          "name": "langfuse-sdk",
+          "version": "3.2.1",
+          "attributes": {}
+        }
+      },
+      "model": null,
+      "modelParameters": null,
+      "completionStartTime": null,
+      "promptId": null,
+      "promptName": null,
+      "promptVersion": null,
+      "latency": 2.656,
+      "timeToFirstToken": null,
+      "usageDetails": {},
+      "costDetails": {},
+      "usagePricingTierId": null,
+      "usagePricingTierName": null,
+      "inputPrice": 0,
+      "outputPrice": 0,
+      "totalPrice": 0,
+      "calculatedInputCost": null,
+      "calculatedOutputCost": null,
+      "calculatedTotalCost": 0,
+      "unit": "TOKENS",
+      "promptTokens": 0,
+      "completionTokens": 0,
+      "totalTokens": 0,
+      "modelId": null,
+      "usage": {
+        "unit": "TOKENS",
+        "input": 0,
+        "output": 0,
+        "total": 0
+      }
+    }
+  ],
+  "htmlPath": "/project/cmqeux7ka026dad0cpie4nbw6/traces/4d43c4393a7c9bd8d1be1bcbdb954794",
+  "totalCost": 0.002412
+}
