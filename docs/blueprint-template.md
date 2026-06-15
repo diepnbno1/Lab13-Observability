@@ -26,8 +26,8 @@
 ### 3.1 Logging & Tracing
 - [EVIDENCE_CORRELATION_ID_SCREENSHOT]: docs/evidence/logs-correlation-id.png
 - [EVIDENCE_PII_REDACTION_SCREENSHOT]: docs/evidence/logs-pii-redaction.png
-- [EVIDENCE_TRACE_LIST_SCREENSHOT]: docs/evidence/langfuse-trace-list.png
-- [EVIDENCE_TRACE_WATERFALL_SCREENSHOT]: docs/evidence/langfuse-trace-waterfall.png
+- [EVIDENCE_TRACE_LIST_SCREENSHOT]: docs/evidence/langfuse-trace-list-ui.png
+- [EVIDENCE_TRACE_WATERFALL_SCREENSHOT]: docs/evidence/langfuse-trace-waterfall-ui.png
 - [TRACE_WATERFALL_EXPLANATION]: The `rag_slow` trace shows `rag.retrieve` taking about 2.501s inside the `agent.run` trace, while `llm.generate` stays around 0.152s. This proves the latency incident is caused by retrieval, not generation.
 
 ### 3.2 Dashboard & SLOs
@@ -48,7 +48,7 @@
 ## 4. Incident Response (Group)
 - [SCENARIO_NAME]: rag_slow
 - [SYMPTOMS_OBSERVED]: Tail latency increased during incident injection. Runtime summary recorded incident latency of 2655ms and dashboard showed P99 near 2655ms.
-- [ROOT_CAUSE_PROVED_BY]: Langfuse trace `4d43c4393a7c9bd8d1be1bcbdb954794` and `docs/evidence/langfuse-trace-waterfall.png` show `rag.retrieve` as the slow span. Runtime evidence in `docs/evidence/runtime_summary.json` records incident correlation ID `req-5519de54`.
+- [ROOT_CAUSE_PROVED_BY]: Langfuse trace `4d43c4393a7c9bd8d1be1bcbdb954794` and `docs/evidence/langfuse-trace-waterfall-ui.png` show `rag.retrieve` as the slow span. Runtime evidence in `docs/evidence/runtime_summary.json` records incident correlation ID `req-5519de54`.
 - [FIX_ACTION]: Disabled the `rag_slow` incident toggle and documented retrieval mitigations: truncate long queries, use fallback retrieval source, and reduce prompt size.
 - [PREVENTIVE_MEASURE]: Keep the high-latency P95 alert active with a runbook that compares RAG span duration against LLM generation duration.
 

@@ -7,8 +7,8 @@ Expected generated files:
 - `cost_comparison.json`: created by `python scripts/cost_comparison.py`.
 
 Expected screenshots:
-- `langfuse-trace-list.png`
-- `langfuse-trace-waterfall.png`
+- `langfuse-trace-list-ui.png`
+- `langfuse-trace-waterfall-ui.png`
 - `logs-correlation-id.png`
 - `logs-pii-redaction.png`
 - `dashboard-6-panels.png`
